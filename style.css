@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.main {
+  padding: 15px;
+  height: 90dvh;
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fan__img {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.1s linear;
+}
+
+.leg__img {
+  width: 200px;
+  height: 300px;
+}
+
+.btn__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: lightgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: grey;
+}
+
+.btn-on {
+  background-color: green;
+}
+
+.btn-on:hover,
+.btn-on:active {
+  background-color: rgb(0, 74, 0);
+}
+
+.btn-off {
+  background-color: red;
+}
+
+.btn-off:hover,
+.btn-off:active {
+  background-color: darkred;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 5px;
+  }
+
+  .btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .main {
+    max-width: 600px;
+  }
+
+  .btn {
+    width: 60px;
+    height: 60px;
+  }
+}
